@@ -17,3 +17,7 @@
 		Create: (data, callback, error) ->
 
 			return @m.Request 'orders', 'POST', data, callback, error
+
+		Items: (id, callback, error) ->
+
+			return @m.Request 'orders/'+id+'/items', 'GET', null, callback, error
